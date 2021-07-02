@@ -1,9 +1,7 @@
 import os
 from flask import Flask, render_template, send_from_directory
 from dotenv import load_dotenv
-from . import db
 from werkzeug.security import generate_password_hash, check_password_hash
-from app.db import get_db
 from flask import request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -51,7 +49,6 @@ def login():
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
-        db = get_db()
         error = None
         user = UserModel.query.filter_by(username=username).first()
 
@@ -75,7 +72,6 @@ def register():
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
-        db = get_db()
         error = None
 
         if not username:
