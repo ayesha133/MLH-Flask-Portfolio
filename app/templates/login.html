@@ -1,32 +1,56 @@
-<div id="login" class="container">
-  <div class="row-fluid">
-    <div class="span12">
-      <div class="login well well-small">
-        <div class="center">
-          <img src="http://placehold.it/250x100&text=Logo" alt="logo"> 
-        </div>
-        <form action="/users/login" class="login-form" id="UserLoginForm" method="post" accept-charset="utf-8">
-          <div class="control-group">
-            <div class="input-prepend">
-              <span class="add-on"><i class="icon-user"></i></span>
-              <input name="data[User][username]" required="required" placeholder="Username" maxlength="255" type="text" id="UserUsername"> 
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link lang='sass' rel="stylesheet" href="./static/styles/login.css">
+</head>
+
+<form action="/login" method="POST">
+<div class="row">
+  <div class="col-md-6 mx-auto p-0">
+      <div class="card">
+          <div class="login-box">
+              <div class="login-snip">
+                 <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
+                 <input id="tab-2" type="radio" name="tab" class="sign-up"> <a for="tab-2" class="tab" href="/register">Sign Up</a>
+                                                            
+                 <div class="login-space">
+                      <div class="login">
+                          <div class="group"> <label for="user" class="label">Username</label> <input id="username" name="username" type="text" class="input" placeholder="Enter your username"> </div>
+                          <div class="group"> <label for="pass" class="label">Password</label> <input id="password" name="password" type="password" class="input" data-type="password" placeholder="Enter your password"> </div>
+                          <div class="group"> <input id="check" type="checkbox" class="check" checked> <label for="check"><span class="icon"></span> Keep me Signed in</label> </div>
+                          <div class="button"> <button type="submit" class="button" value="Sign In">Sign in</button> </div>
+                          <div class="hr"></div>
+                          <div class="foot"> <a href="#">Forgot Password?</a> </div>
+                      </div>
+                     
+                  </div>
+              </div>
           </div>
-          <div class="control-group">
-            <div class="input-prepend">
-              <span class="add-on"><i class="icon-lock"></i></span>
-              <input name="data[User][password]" required="required" placeholder="Password" type="password" id="UserPassword"> 
-            </div>
-          </div>
-          <div class="control-group">
-            <label id="remember-me">
-              <input type="checkbox" name="data[User][remember_me]" value="1" id="UserRememberMe"> Remember Me?</label>
-          </div>
-          <div class="control-group">
-            <input class="btn btn-primary btn-large btn-block" type="submit" value="Sign in"> 
-          </div>
-        </form>
-      </div><!--/.login-->
-    </div><!--/.span12-->
-  </div><!--/.row-fluid-->
-</div><!--/.container-->
+      </div>
+  </div>
+</div>
+</form>
+<!-- <form action="action_page.php" method="post">
+  <div class="imgcontainer">
+    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form> -->
+</html>

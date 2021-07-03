@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link lang='sass' rel="stylesheet" href="./static/styles/login.css">
+</head>
+
+<form action="/register" method="POST">
+<div class="row">
+  <div class="col-md-6 mx-auto p-0">
+      <div class="card">
+          <div class="login-box">
+              <div class="login-snip">
+                 <input id="tab-1" type="radio" name="tab" class="sign-in" checked><a for="tab-1" class="tab" href="/login">Login</a>
+                 <input id="tab-2" type="radio" name="tab" class="sign-up"> <label for="tab-2" class="tab">Sign Up</label>
+                                                            
+                 <div class="login-space">
+                      <div class="sign-up-form">
+                          <div class="group"> <label for="user" class="label">New Username</label> <input id="username" name="username" type="text" class="input" placeholder="Create your Username"> </div>
+                          <div class="group"> <label for="pass" class="label">New Password</label> <input id="password" name="password" type="password" class="input" data-type="password" placeholder="Create your password"> </div>
+                          <div class="group"> <input type="submit" class="button" value="Sign Up"> </div>
+                          <div class="hr"></div>
+                          <div class="foot"> <label for="tab-1">Already Member?</label> </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</form>
+
+</html>
