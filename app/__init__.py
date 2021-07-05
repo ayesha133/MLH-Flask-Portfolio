@@ -58,11 +58,17 @@ def login():
     password):
             error = 'Incorrect password.'
 
-        if error is None:
+        if error is not None:
             return render_template('login.html', url=os.getenv("URL"), 
                 message=error), 418
+
+        if error is None:
+            return render_template('login.html', url=os.getenv("URL"), 
+                message="Login successful."), 200 
         else:
-            return error, 418
+            return render_template('login.html', url=os.getenv("URL"), 
+                message=error), 418
+        
 
     return render_template('login.html',url=os.getenv("URL"))
 
