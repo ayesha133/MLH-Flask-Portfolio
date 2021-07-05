@@ -52,9 +52,14 @@ def login():
         error = None
         user = UserModel.query.filter_by(username=username).first()
 
+        if not username:
+            error = 'Username is required.'
+        elif not password:
+            error = 'Password is required.'
+
         if user is None:
             error = 'Incorrect username.'
-        elif not check_password_hash(user['password'],
+        elif not check_password_hash(user.password,
     password):
             error = 'Incorrect password.'
 
