@@ -59,7 +59,8 @@ def login():
             error = 'Incorrect password.'
 
         if error is None:
-            return "Login Successful", 200
+            return render_template('login.html', url=os.getenv("URL"), 
+                message=error), 418
         else:
             return error, 418
 
@@ -82,11 +83,14 @@ def register():
         elif UserModel.query.filter_by(username=username).first() is not None:
             error = f"User {username} is already registered."
 
+        message = error
         if error is None:
             new_user = UserModel(username, generate_password_hash(password))
             db.session.add(new_user)
             db.session.commit()
-            return f"User {username} created successfully"
+            message = f"User {username} created successfully"
+            return render_template('register.html', url=os.getenv("URL"), 
+                message=message), 200
         else:
             return error, 418
 

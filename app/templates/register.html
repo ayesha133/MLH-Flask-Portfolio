@@ -19,6 +19,9 @@
                           <div class="group"> <label for="pass" class="label">New Password</label> <input id="password" name="password" type="password" class="input" data-type="password" placeholder="Create your password"> </div>
                           <div class="group"> <input type="submit" class="button" value="Sign Up"> </div>
                           <div class="hr"></div>
+                        {% if message %}
+                          <p>{{ message }}</p>
+                        {% endif %}
                           <div class="foot"> <label for="tab-1">Already Member?</label> </div>
                       </div>
                   </div>
