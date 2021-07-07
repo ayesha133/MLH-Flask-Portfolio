@@ -37,7 +37,7 @@ class UserModel(db.Model):
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="Bob Zoldyck | Portfolio", url=os.getenv("URL"))
+    return render_template('index.html', title="Ayesha Arshad | Portfolio", url=os.getenv("URL"))
 
 @app.route('/health', methods=['GET'])
 def health():
