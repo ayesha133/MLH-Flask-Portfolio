@@ -30,3 +30,6 @@ jobs:
 
             - name: Deploy Site
               run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && git fetch && git reset --hard origin/master && docker-compose up -d --build'
+
+            - name: Discord Message
+              run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"
