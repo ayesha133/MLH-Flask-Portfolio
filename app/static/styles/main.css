@@ -1,5 +1,10 @@
-p, h1, h2, h3, h4, h5, h6, button {
-    font-family: "Roboto", serif;
+p,h2, h3, h4, h5, h6, button {
+    font-family: "Roboto", serif; 
+}
+
+h1 {
+    font-family: "Consolas";
+    color: white;
 }
 
 html {
@@ -20,9 +25,71 @@ img{
     
 }
 
+
 #sliderContainer{
-    width: 500px;
+    width: 40vw;
     margin:auto; 
+}
+
+@media (max-width: 650px) {
+    #sliderContainer {
+        width: 100%;
+    }
+}
+
+.words {
+    font-size: 65px!important;
+}
+
+.hello-container {
+    position: center;
+    padding-left: 10%;
+    padding-top: 150px;
+    
+
+}
+
+@media (max-width: 1112px) {
+    .words {
+        padding-top: 200px!important;
+        font-size: 0.1em!important;
+
+        /* hide text */
+        /* text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden; */
+    }
+}
+
+@media (max-width: 1112px) {
+    .hello-container {
+        position: left;
+        padding-top: 0px;
+        padding-left: 0px;
+        font-size: 0px!important;
+
+    }
+}
+
+.small-intro {
+    display:block;
+    /* hide text */
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media (max-width: 1112px) {
+    .small-intro {
+        padding-top: 100px;
+        font-size: 0.5em!important;
+
+        /* unhide text */
+        text-indent: inherit;
+        white-space: inherit;
+        overflow: inherit;
+
+    }
 }
 
 .profile {
@@ -34,6 +101,7 @@ img{
 }
 
 .profile h1 {
+    top: 30%;
     font-size: 50px;
     font-weight: 700;
     color: white;
@@ -43,8 +111,8 @@ img{
     font-size: 20px;
     font-weight: 700;
     color: white;
-    position: absolute; 
-    padding-left: 400px;
+    position: center; 
+    left: 5%;
     z-index: 1;
     top:45%;
     
@@ -58,6 +126,7 @@ img{
         margin-right: auto;
         display: block;        
         padding: 20px;
+   
 }
 
 .profile .profile-picture {
@@ -69,7 +138,8 @@ img{
 .titleIntro {
     color: white;
     position: relative;
-    padding-left: 250px;
+    /* padding-left: 100px; */ 
+    padding-left: 50px;
     top: 60%;
     width: 16em;   
     border-right: 2px solid rgba(255, 255, 255, 0.75);
@@ -85,14 +155,14 @@ img{
     white-space: nowrap;
     
     letter-spacing: .15em;
-    animation: animated-text 4s steps(29,end) 1s 1 normal both,
+    animation: animated-text 3s steps(29,end) 1s 1 normal both,
                animated-cursor 600ms steps(29,end) infinite normal;
 
 }
 
 @keyframes animated-text{
     from{width: 0;}
-    to{width: 820px;}
+    to{width: 765px;}
 }
 
 @keyframes animated-cursor{
@@ -100,18 +170,39 @@ img{
     to{border-right-color: transparent;}
 } 
 
-
+@media (max-width: 900px) {
+    @keyframes animated-text {
+        from{width: 0;}
+        to{width: 400px;}
+    }
+}
 
 #sub-nav{
-    top: 30%;
+    top: 200px;
     list-style: none;
-    right: 20%;
+    right: 15%;
     position:absolute;
     font-size: 20px;
     font-weight: 300;
     text-align: center;
     border-left: 3px solid white;
 
+}
+
+@media (max-width: 1112px) {
+    #sub-nav {
+        top: 400px;
+        /* right: 60%;
+        left: 40%; */
+        /* right: 50%;
+        left: 50%; */
+        /* position: sticky; */
+        margin: auto;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        
+    }
 }
 
 .slideAnim{
@@ -150,26 +241,50 @@ a:hover {
     z-index: 1;
 }
 
-
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
 
 #about {
     color: white;
     position: center;
     z-index: 1;
     padding-top: 50px;
-    padding-right: 200px;
+    padding-right: 15vw;
     padding-bottom: 50px;
-    padding-left: 200px;
+    padding-left: 15vw;
 }
 
+@media (max-width: 700px) {
+    #about {
+        padding-right: 8vw;
+        padding-left: 8vw;
+    }
+}
 #experience {
     color: white;
     position: center;
     z-index: 1;
+    /*
     padding-top: 50px;
     padding-right: 200px;
     padding-bottom: 50px;
-    padding-left: 200px;
+    padding-left: 200px; */
+
+    padding-top: 50px;
+    padding-right: 15vw;
+    padding-bottom: 50px;
+    padding-left: 15vw;
+}
+
+@media (max-width: 650px) {
+    #experience {
+        padding-right: 8vw;
+        padding-left: 8vw;
+    }
 }
 
 #projects {
@@ -177,9 +292,16 @@ a:hover {
     position: center;
     z-index: 1;
     padding-top: 50px;
-    padding-right: 200px;
+    padding-right: 15vw;
     padding-bottom: 50px;
-    padding-left: 200px;
+    padding-left: 15vw;
+}
+
+@media (max-width: 650px) {
+    #projects {
+        padding-right: 8vw;
+        padding-left: 8vw;
+    }
 }
 
 #contact {

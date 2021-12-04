@@ -8,15 +8,15 @@ services:
       - .env
     volumes:
       - .:/myportfolio
-    depends_on:
-      - db
+  #  depends_on:
+  #    - db
 
-  db:
-    container_name: db
-    image: postgres
-    restart: always
-    env_file:
-      - .env
+  #db:
+  #  container_name: db
+  #  image: postgres
+  #  restart: always
+  #  env_file:
+  #    - .env
 
   nginx:
     container_name: nginx
