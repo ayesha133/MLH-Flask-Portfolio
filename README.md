@@ -32,6 +32,4 @@ $ export FLASK_ENV=development
 $ flask run
 ```
 
-## Contributors
-Janelle Wong 
-Ayesha
+
