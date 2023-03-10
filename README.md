@@ -1,29 +1,6 @@
-# Flask-Blog
+# Ayesha's Personal Website 
 
-Minimal Flask template to get started on your blog application for MLH Fellowship Production Engineering track.
- 
-
-## Installation
-
-Make sure you have python3 and pip installed
-
-
-Create and activate virtual environment using virtualenv
-```bash
-$ python -m venv python3-virtualenv
-$ source python3-virtualenv/bin/activate
-```
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-
-
-Create a .env file using the example.env template
+A personal website built with Flask, HTML, CSS, and Bootstrap. This website is hosted on an Oracle VM Instance and containerized with Docker. CI/CD pipeline is created through Github Actions to allow for automated testing and deployment.
 
 
 Start flask development server
